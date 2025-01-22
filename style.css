@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --green: #1ba589;
+}
+
+html{
+    font-size: 62.5%
+}
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container h1{
+    font-size:  4rem;
+    color: #000000;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.container .box{
+    width: 50%;
+    margin: 5rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.container .box .board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    grid-gap: 5px;
+    margin: 2rem 0;
+}
+
+.container .box .board .cell{
+    width: 10rem;
+    height: 10rem;
+    background: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:  3rem;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+.container .box .board .winning-cell{
+    background: var(--green);
+    color: #fff;
+}
+
+.container .box .board .cell:hover{
+    background: #eee;
+}
+
+.container .box .info{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container .box .info p{
+    font-size: 1.7rem;
+    color: grey;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.container .box .btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .box .btns .btn{
+    padding: 1rem;
+    width: 15rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.container .box .btns .startGame{
+    background: var(--green);
+    color: #fff;
+}
+
+.container .box .btns .resetGame{
+    background: rgb(250, 61, 61);
+    color: #fff;
+}
+
+@media (max-width:991px){
+    .container .box{
+        width: 60%;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 58.5%;
+    }
+
+    .container .box{
+        width: 80%;
+    }
+}
+
+@media (max-width:500){
+    .container .box{
+        width: 100%;
+    }
+}
